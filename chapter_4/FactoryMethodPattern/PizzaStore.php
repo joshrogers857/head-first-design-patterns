@@ -5,10 +5,17 @@ declare(strict_types=1);
 namespace FactoryMethodPattern;
 
 abstract class PizzaStore {
-    public function __construct()
+    final public function orderPizza(string $type): Pizza
     {
-        throw new \Exception('Not implemented');
+        $pizza = $this->createPizza($type);
+
+        $pizza->prepare();
+        $pizza->bake();
+        $pizza->cut();
+        $pizza->box();
+
+        return $pizza;
     }
 
-    protected abstract function createPizza(string $type);
+    protected abstract function createPizza(string $type): Pizza;
 }

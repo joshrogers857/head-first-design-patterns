@@ -12,28 +12,28 @@ abstract class Pizza {
 
     public function prepare(): void
     {
-        print("Preparing " . $this->name);
-        print("Tossing dough...");
-        print("Adding sauce...");
-        print("Adding toppings: ");
+        print("Preparing {$this->name}\n");
+        print("Tossing dough...\n");
+        print("Adding sauce...\n");
+        print("Adding toppings: \n");
         foreach($this->toppings as $topping) {
-            print("  " . $topping);
+            print("\t$topping\n");
         }
     }
 
     public function bake(): void
     {
-        print("Bake for 25 minutes at 350");
+        print("Bake for 25 minutes at 350\n");
     }
 
     public function cut(): void
     {
-        print("Cutting the pizza into diagonal slices");
+        print("Cutting the pizza into diagonal slices\n");
     }
 
     public function box(): void
     {
-        print("Placing the pizza into an official PizzaStore box");
+        print("Placing the pizza into an official PizzaStore box\n");
     }
 
     public function getName(): string

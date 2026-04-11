@@ -16,6 +16,6 @@ final class ChicagoStyleCheesePizza extends Pizza {
 
     public function cut(): void
     {
-        print("Cutting the pizza into square slices");
+        print("Cutting the pizza into square slices\n");
     }
 }
